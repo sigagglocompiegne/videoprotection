@@ -187,7 +187,7 @@ Valeurs possibles :
 |01|PUB|Public|
 |02|PRI|Privé|
 
-`lt_gestion` : Liste permettant de décrire les différentes situations de gestionnaire de la caméra, définie dans le schéma r_objet
+`lt_gestion` : Liste permettant de décrire les différentes situations de gestionnaire de la caméra, définie dans le schéma m_reseau_sec
 
 |code | valeur | definition|
 |:---|:---|:---| 
@@ -207,3 +207,46 @@ Valeurs possibles :
 |02|COM|Commune|
 |99|AUT|Autre|
 
+`lt_src_geom` : Liste permettant de décrire les différents référeniels géographiques utilisés lors de la saisie/mise à jour des caméras, définie dans le schéma r_objet
+
+|code | valeur |
+|:---|:---|
+|code|Code de la liste énumérée relative aux référentiels géographiques|character varying(2)| |
+|valeur|Valeur de la liste énumérée relative aux référentiels géographiques|character varying(254)| |
+
+Particularité(s) à noter :
+
+    Une clé primaire existe sur le champ code  
+
+Valeurs possibles : 
+|code | valeur |
+|:---|:---|
+|00|Non renseigné|
+|10|Cadastre|
+|11|PCI vecteur|
+|12|BD Parcellaire|
+|13|RPCU|
+|20|Ortho-images|
+|21|Orthophotoplan IGN|
+|22|Orthophotoplan partenaire|
+|23|Orthophotoplan local|
+|30|Filaire voirie|
+|31|Route BDTopo|
+|32|Route OSM|
+|40|Cartes|
+|41|Scn25|
+|50|Lever|
+|51|Plan topographique|
+|52|PCRS|
+|53|Trace GPS|
+|54|Coordonnées X,Y|
+|60|Géocodage|
+|61|Base Adresse Locale|
+|70|Plan masse|
+|71|Plan masse vectoriel|
+|72|Plan masse redessiné|
+|80|Thématique|
+|81|Document d'urbanisme|
+|82|Occupation du sol|
+|83|Thème BDTopo|
+|99|Autre|
