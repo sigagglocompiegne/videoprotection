@@ -10,3 +10,4 @@ Ensemble des éléments constituant la mise en oeuvre de la base de données des
 - Script d'initialisation de la base de données
 * [Création  de la structure initiale](bdd/script_videoprotection.sql)
 - [Documentation d'administration de la base](bdd/doc_admin_bd_vs.md)
+![picto](MCD_videoprotection.loo)
