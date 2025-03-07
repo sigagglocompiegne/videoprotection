@@ -8,3 +8,4 @@ Application de gestion des caméras de vidéoprotection
 Ensemble des éléments constituant la mise en oeuvre de la base de données des caméras de vidéoprotection.
 
 - Script d'initialisation de la base de données
+* [Création  de la structure initiale](script_videoprotection.sql)
