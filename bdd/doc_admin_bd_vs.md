@@ -147,8 +147,8 @@ Dans le contexte de la vidéosurveillance, seules les valeurs suivantes sont ret
 - En travaux
 - Arrêté   
 
-|code | valeur | definition|
-|:---|:---|:---| 
+|code | valeur |
+|:---|:---|
 |code|Code de la liste énumérée relative au niveau de réalisation|character varying(2)| |
 |valeur|Valeur de la liste énumérée relative au niveau de réalisation|character varying(40)| |
 
@@ -167,3 +167,43 @@ Valeurs possibles :
 |40|En service|
 |90|Provisoire|
 |ZZ|Non concerné|
+
+`lt_domanialite` : Liste permettant de décrire les différentes situations de domanialité de la posittion de la caméra, définie dans le schéma r_objet
+
+|code | valeur | definition|
+|:---|:---|:---| 
+|code|Code de la liste énumérée relative à la domanialité de la position de caméra de vidéosurveillance|character varying(2)| |
+|valeur|Valeur de la liste énumérée relative à la domanialité de la position de caméra de vidéosurveillance|character varying(254)| |
+|valeur|Valeur littérale de la liste énumérée relative à la domanialité de la position de caméra de vidéosurveillance|character varying(254)| |
+
+Particularité(s) à noter :
+
+    Une clé primaire existe sur le champ code  
+
+Valeurs possibles : 
+|code | valeur | definition|
+|:---|:---|:---|
+|00|NR|Non renseigné|
+|01|PUB|Public|
+|02|PRI|Privé|
+
+`lt_gestion` : Liste permettant de décrire les différentes situations de gestionnaire de la caméra, définie dans le schéma r_objet
+
+|code | valeur | definition|
+|:---|:---|:---| 
+|code|Code de la liste énumérée relative au gestionnaire de la caméra de vidéosurveillance|character varying(2)| |
+|valeur|Valeur de la liste énumérée relative au gestionnaire de la caméra de vidéosurveillance|character varying(80)| |
+|valeur|Valeur littérale de la liste énumérée relative au gestionnaire de la caméra de vidéosurveillance|character varying(254)| |
+
+Particularité(s) à noter :
+
+    Une clé primaire existe sur le champ code  
+
+Valeurs possibles : 
+|code | valeur | definition|
+|:---|:---|:---|
+|00|NR|Non renseigné|
+|01|INT|Intercommunalité|
+|02|COM|Commune|
+|99|AUT|Autre|
+
