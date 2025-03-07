@@ -1,2 +1,2 @@
 # Vidéoprotection
-Application de gestion des caméros de vidéoprotection
+Application de gestion des caméras de vidéoprotection
