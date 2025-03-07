@@ -94,3 +94,48 @@ Particularité(s) à noter : aucune
 
 ## Liste de valeur
 
+`lt_type_camera` : Liste permettant de décrire les différents types de caméra, définie dans le schéma m_videoprotection
+
+|code | valeur | definition|
+|:---|:---|:---| 
+|code|Code de la liste énumérée relative au type de caméra de vidéosurveillance|character varying(2)| |
+|valeur|Valeur de la liste énumérée relative au type de caméra de vidéosurveillance|character varying(254)| |
+|valeur|Valeur littérale de la liste énumérée relative au type de caméra de vidéosurveillance|character varying(254)| |
+
+Particularité(s) à noter :
+
+    Une clé primaire existe sur le champ code  
+
+Valeurs possibles : 
+|code | valeur | definition|
+|:---|:---|:---|
+|00|NR|Non renseigné|
+|01|DOM|Dôme|
+|02|FIX|Fixe|
+|03|FIX180|Fixe 180|
+|04|MULTI|Multicapteur|
+|99|AUT|Autre|
+
+`lt_type_support` : Liste permettant de décrire les différents supports de caméra, définie dans le schéma m_videoprotection
+
+|code | valeur | definition|
+|:---|:---|:---| 
+|code|Code de la liste énumérée relative au support de caméra de vidéosurveillance|character varying(2)| |
+|valeur|Valeur de la liste énumérée relative au support de caméra de vidéosurveillance|character varying(254)| |
+|valeur|Valeur littérale de la liste énumérée relative au support de caméra de vidéosurveillance|character varying(254)| |
+
+Particularité(s) à noter :
+
+    Une clé primaire existe sur le champ code  
+
+Valeurs possibles : 
+|code | valeur | definition|
+|:---|:---|:---|
+|00|NR|Non renseigné|
+|10|BAT|Bâtiment|
+|11|BATANGL|Angle de bâtiment|
+|12|BATFAC|Façade de bâtiment|
+|20|POT|Poteau|
+|21|MATECL|Mât d'éclairage, candélabre|
+|30|MUR|Mur|
+|99|AUT|Autre|
