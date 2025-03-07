@@ -53,7 +53,8 @@ Particularité(s) à noter :
 
 |Nom attribut | Définition | Type  | Valeurs par défaut |
 |:---|:---|:---|:---|
-|id_ant|Identifiant unique d'antenne|character(10)| |
+|gid|Identifiant unique d'antenne|character(10)| |
+|id_ant|Référence d'antenne|character(10)| |
 |type|Type|character varying(50)| |
 |support|Support|character varying(30)| |
 |photo|Photo|character varying(254)| |
