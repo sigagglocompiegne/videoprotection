@@ -70,7 +70,8 @@ Particularité(s) à noter :
 |op_maj|Opérateur de la dernière mise à jour de l'objet|character varying(80)| |
 |geom|Géométrie ponctuelle de l'objet|USER-DEFINED| |
 
-Particularité(s) à noter : aucune
+Particularité(s) à noter : 
+* Une clé primaire existe sur le champ `gid`
 
 `geo_video_pro` : table de ponctuels représentant la localisation des points de raccordement optique liés à la mise en place du système de vidéosurveillance
 
