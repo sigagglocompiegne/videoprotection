@@ -43,5 +43,54 @@ L'ensemble des classes d'objets portant sur la vidéoprotection est stocké dans
 |dbstatut|Code permettant de décrire le statut de l'objet (r_objet.lt_statut)|character varying(2)| |
 |geom|Géométrie ponctuelle de l'objet|USER-DEFINED| |
 
+Particularité(s) à noter :
+* Une clé primaire existe sur le champ `id_cam`
+* Une clé étrangère existe sur la liste de valeurs `lt_domanialite`
+* Une clé étrangère existe sur la liste de valeurs `lt_type_camera`
+* Une clé étrangère existe sur la liste de valeurs `lt_type_support`
 
+`geo_video_antenne` : table de ponctuels représentant la localisation des antennes liées aux caméras de vidéosurveillance
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|
+|id_ant|Identifiant unique d'antenne|character(10)| |
+|type|Type|character varying(50)| |
+|support|Support|character varying(30)| |
+|photo|Photo|character varying(254)| |
+|insee|Code INSEE|character varying(5)| |
+|commune|Nom de la commune|character varying(80)| |
+|observ|Observations|character varying(254)| |
+|x_l93|Coordonnées X en lambert 93|numeric |
+|y_l93|Coordonnées Y en lambert 93|numeric |
+|src_geom|Référentiel géographique de saisie|character varying(2)| |
+|dbinsert|Horodatage de l'intégration en base de l'objet|timestamp without time zone |
+|dbupdate|Horodatage de la mise à jour en base de l'objet|timestamp without time zone| |
+|op_sai|Opérateur de saisie de l'objet|character varying(80)| |
+|op_maj|Opérateur de la dernière mise à jour de l'objet|character varying(80)| |
+|geom|Géométrie ponctuelle de l'objet|USER-DEFINED| |
+
+Particularité(s) à noter : aucune
+
+`geo_video_pro` : table de ponctuels représentant la localisation des points de raccordement optique liés à la mise en place du système de vidéosurveillance
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|
+|id_pro|Identifiant unique de point de raccordement optique|character(10)| |
+|photo|Photo|character varying(254)| |
+|insee|Code INSEE|character varying(5)| |
+|commune|Nom de la commune|character varying(80)| |
+|observ|Observations|character varying(254)| |
+|x_l93|Coordonnées X en lambert 93|numeric |
+|y_l93|Coordonnées Y en lambert 93|numeric |
+|src_geom|Référentiel géographique de saisie|character varying(2)| |
+|dbinsert|Horodatage de l'intégration en base de l'objet|timestamp without time zone |
+|dbupdate|Horodatage de la mise à jour en base de l'objet|timestamp without time zone| |
+|op_sai|Opérateur de saisie de l'objet|character varying(80)| |
+|op_maj|Opérateur de la dernière mise à jour de l'objet|character varying(80)| |
+|geom|Géométrie ponctuelle de l'objet|USER-DEFINED| |
+
+Particularité(s) à noter : aucune
+
+
+## Liste de valeur
 
