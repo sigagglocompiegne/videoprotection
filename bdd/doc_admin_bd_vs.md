@@ -4,7 +4,7 @@
 
 ## Modèle conceptuel de données
 
-![picto](mcd_videoprotection.png)
+
 
 
 ## Classes d'objets
