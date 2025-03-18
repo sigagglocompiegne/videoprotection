@@ -142,12 +142,7 @@ Valeurs possibles :
 |30|MUR|Mur|
 |99|AUT|Autre|
 
-`lt_etat_avancement` : Liste permettant de décrire les différents niveaux de réalisation, définie dans le schéma r_objet
-Dans le contexte de la vidéosurveillance, seules les valeurs suivantes sont retenues : 
-- En service : permettant de décrire les caméras mises en place sur le terrain
-- En projet: permettant de décrire les caméras à l'état de projet
-- En travaux
-- Arrêté   
+`lt_etat_camera` : Liste permettant de décrire les différents niveaux de réalisation, définie dans le schéma m_videoprotection
 
 |code | valeur |
 |:---|:---|
@@ -161,14 +156,10 @@ Particularité(s) à noter :
 Valeurs possibles : 
 |code | valeur |
 |:---|:---|
-|00|Non renseigné|
 |10|En projet|
-|11|Non-retenu|
 |20|Arrêté|
 |30|En travaux|
 |40|En service|
-|90|Provisoire|
-|ZZ|Non concerné|
 
 `lt_domanialite` : Liste permettant de décrire les différentes situations de domanialité de la posittion de la caméra, définie dans le schéma r_objet
 
