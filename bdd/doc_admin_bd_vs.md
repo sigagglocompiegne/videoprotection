@@ -249,10 +249,15 @@ Valeurs possibles :
 ## Migration des données
 
 Un traitement FME exécuté après la création de la structure en base, permet de réaliser la migration des données existantes: caméras, périmètres d'autorisation préfectorale, antennes,  points de raccordement optique:
+
 R:\Projets\Metiers\2409RESS-ARC-Videoprotection\Insert_donnees_videoprotection_base_test.fmw
+
 En raison de la présence de référence doublonées, et afin de ne pas surcharger les dates de saisies des caméras, les triggers portant sur le contrôle de référence de caméra, ainsi que l'alimentation des dates d'insertion et de mise à jour des données caméras, sont désactivés en début de traitement et ré-activées en fin de traitement.
+
 Dans le traitement FME: 
+
 - l'attribut "dbstatut" est systématiquement initialisé à '10' (Actif). A charge pour l'utilisateur de supprimer ultérieurement lui-même les caméras qu'il souhaite.
+  
 - la référence actuelle est setée dans l'attribut old_ref_cam. La valeur setée dans l'attribut ref_cam tiend compte de la nouvelle nomenclature : 3 lettres + 2 chiffres
 
 
