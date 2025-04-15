@@ -252,7 +252,7 @@ Un traitement FME exécuté après la création de la structure en base, permet 
 
 R:\Projets\Metiers\2409RESS-ARC-Videoprotection\Insert_donnees_videoprotection_base_test.fmw
 
-En raison de la présence de référence doublonées, et afin de ne pas surcharger les dates de saisies des caméras, les triggers portant sur le contrôle de référence de caméra, ainsi que l'alimentation des dates d'insertion et de mise à jour des données caméras, sont désactivés en début de traitement et ré-activées en fin de traitement.
+En raison de la présence de référence doublonnées, et afin de ne pas surcharger les dates de saisie des caméras, les triggers portant sur le contrôle de référence de caméra, ainsi que l'alimentation des dates d'insertion et de mise à jour des données caméras, sont désactivés en début de traitement et ré-activés en fin de traitement.
 
 Dans le traitement FME: 
 
