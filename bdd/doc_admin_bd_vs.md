@@ -24,8 +24,6 @@ L'ensemble des classes d'objets portant sur la vidéoprotection est stocké dans
 |support|Type de support|character varying(2)| |
 |doman|Domanialité de la position de la caméra|character varying(2)| |
 |gestion|Gestionnaire de la caméra|character varying(2)| |
-|nomfic|Nom du fichier pdf contenant la fiche technique de la caméra|character varying(80) |
-|urlfic|URL vers la fiche technique|character varying(254)| |
 |angle|Angle pour la représentation de l'angle de vue des caméras fixes, exprimé en degré par rapport à l'horizontale, dans le sens trigonométrique|integer| |
 |insee|Code INSEE|character varying(5)| |
 |commune|Nom de la commune|character varying(80)| |
@@ -142,7 +140,7 @@ Valeurs possibles :
 |30|MUR|Mur|
 |99|AUT|Autre|
 
-`lt_etat_camera` : Liste permettant de décrire les différents niveaux de réalisation, définie dans le schéma m_videoprotection
+`lt_etat_avancement` : Liste permettant de décrire les différents niveaux de réalisation, définie dans le schéma r_objet
 
 |code | valeur |
 |:---|:---|
@@ -156,14 +154,18 @@ Particularité(s) à noter :
 Valeurs possibles : 
 |code | valeur |
 |:---|:---|
+|00|Non renseigné|
 |10|En projet|
+|11|Non-retenu|
 |20|Arrêté|
 |30|En travaux|
 |40|En service|
+|90|Provisoire|
+|ZZ|Non concerné|
 
 `lt_domanialite` : Liste permettant de décrire les différentes situations de domanialité de la posittion de la caméra, définie dans le schéma r_objet
 
-|code | valeur | definition|
+||
 |:---|:---|:---| 
 |code|Code de la liste énumérée relative à la domanialité de la position de caméra de vidéosurveillance|character varying(2)| |
 |valeur|Valeur de la liste énumérée relative à la domanialité de la position de caméra de vidéosurveillance|character varying(254)| |
@@ -174,7 +176,7 @@ Particularité(s) à noter :
     Une clé primaire existe sur le champ code  
 
 Valeurs possibles : 
-|code | valeur | definition|
+||
 |:---|:---|:---|
 |00|NR|Non renseigné|
 |01|PUB|Public|
@@ -243,3 +245,14 @@ Valeurs possibles :
 |82|Occupation du sol|
 |83|Thème BDTopo|
 |99|Autre|
+
+## Migration des données
+
+Un traitement FME exécuté après la création de la structure en base, permet de réaliser la migration des données existantes: caméras, périmètres d'autorisation préfectorale, antennes,  points de raccordement optique:
+R:\Projets\Metiers\2409RESS-ARC-Videoprotection\Insert_donnees_videoprotection_base_test.fmw
+En raison de la présence de référence doublonées, et afin de ne pas surcharger les dates de saisies des caméras, les triggers portant sur le contrôle de référence de caméra, ainsi que l'alimentation des dates d'insertion et de mise à jour des données caméras, sont désactivés en début de traitement et ré-activées en fin de traitement.
+Dans le traitement FME: 
+- l'attribut "dbstatut" est systématiquement initialisé à '10' (Actif). A charge pour l'utilisateur de supprimer ultérieurement lui-même les caméras qu'il souhaite.
+- la référence actuelle est setée dans l'attribut old_ref_cam. La valeur setée dans l'attribut ref_cam tiend compte de la nouvelle nomenclature : 3 lettres + 2 chiffres
+
+
